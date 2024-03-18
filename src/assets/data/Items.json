@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Ramen",
+    "description": "A noodle soup from Japan, flavored with soy sauce or miso, with toppings like sliced pork, nori, and green onions.",
+    "imageURL": "https://cdn.pixabay.com/photo/2019/11/23/15/26/ramen-4647408_1280.jpg",
+    "price": 900,
+    "count": 1
+  },
+  {
+    "id": 2,
+    "name": "Steak",
+    "description": "A cut of meat, typically beef, grilled or pan-fried. Varieties include ribeye, T-bone, and sirloin.",
+    "imageURL": "https://cdn.pixabay.com/photo/2017/03/23/19/57/asparagus-2169305_1280.jpg",
+    "price": 1400,
+    "count": 1
+  },
+  {
+    "id": 3,
+    "name": "Sandwich",
+    "description": "Consists of vegetables, sliced cheese or meat, placed between slices of bread, served cold or hot.",
+    "imageURL": "https://cdn.pixabay.com/photo/2017/05/10/17/27/sandwich-2301387_1280.jpg",
+    "price": 400,
+    "count": 1
+  },
+  {
+    "id": 4,
+    "name": "Hamburger",
+    "description": "A sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
+    "imageURL": "https://cdn.pixabay.com/photo/2016/07/29/14/04/burger-1553287_1280.jpg",
+    "price": 500,
+    "count": 1
+  },
+  {
+    "id": 5,
+    "name": "Pizza",
+    "description": "A dish of Italian origin consisting of a flat, round base of dough baked with a topping of tomato sauce and cheese, often with added meat or vegetables.",
+    "imageURL": "https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg",
+    "price": 1400,
+    "count": 1
+  },
+  {
+    "id": 6,
+    "name": "Tendon",
+    "description": "A Japanese dish consisting of a bowl of rice topped with tempura (battered and fried seafood or vegetables).",
+    "imageURL": "https://cdn.pixabay.com/photo/2016/11/01/16/46/shrimp-tempura-1788864_1280.jpg",
+    "price": 800,
+    "count": 1
+  },
+  {
+    "id": 7,
+    "name": "Noodles",
+    "description": "A staple in many cultures, made from unleavened dough which is stretched, extruded, or rolled flat and cut into various shapes.",
+    "imageURL": "https://cdn.pixabay.com/photo/2019/09/30/03/07/buckwheat-subtitles-chinese-4514719_1280.jpg",
+    "price": 600,
+    "count": 1
+  },
+  {
+    "id": 8,
+    "name": "Sushi",
+    "description": "A Japanese dish of prepared vinegared rice, accompanied by various ingredients such as seafood, often raw, and vegetables.",
+    "imageURL": "https://cdn.pixabay.com/photo/2020/04/04/15/07/sushi-5002639_1280.jpg",
+    "price": 2000,
+    "count": 1
+  }
+]
