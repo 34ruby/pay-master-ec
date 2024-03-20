@@ -4,7 +4,7 @@
     "name": "Ramen",
     "description": "A noodle soup from Japan, flavored with soy sauce or miso, with toppings like sliced pork, nori, and green onions.",
     "imageURL": "https://cdn.pixabay.com/photo/2019/11/23/15/26/ramen-4647408_1280.jpg",
-    "price": 900,
+    "price": 1,
     "count": 1
   },
   {

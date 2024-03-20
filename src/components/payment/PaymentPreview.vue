@@ -107,7 +107,7 @@ const submitPaypay = async (items) => {
     orderItems: [],
     isAuthorization: false,
     redirectUrl: `https://paypay.ne.jp/`,
-    redirectType: "APP_DEEP_LINK", //WEB_LINK
+    redirectType: "WEB_LINK",
     userAgent:
       "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1",
   };
@@ -134,10 +134,45 @@ const submitPaypay = async (items) => {
         },
       },
     );
-    console.log(response.data);
+    const qrCodeUrl = response.data.qrCodeUrl;
+    const merchantPaymentId = response.data.merchantPaymentId;
+    const requestUrl = `http://localhost:3000/api/payment-detail?merchantPaymentId=${encodeURIComponent(merchantPaymentId)}`;
+    console.log(requestUrl);
+    const popupWindow = window.open(
+      qrCodeUrl,
+      "Uehara Shop Payment",
+      "width=1200, height=960",
+    );
+    getPaypayPaymentStatus(requestUrl, popupWindow);
   } catch (error) {
     console.error("There was an error!", error);
   }
+};
+
+const getPaypayPaymentStatus = (url, window) => {
+  const getResult = async (url) => {
+    try {
+      const response = await axios.get(url);
+      console.log(response.data);
+      if (
+        response.data.resultInfo.code === "SUCCESS" &&
+        response.data.data.status === "COMPLETED"
+      ) {
+        console.log("완료");
+        clearInterval(intervalId);
+        window.close();
+        const merchantPaymentId = response.data.data.merchantPaymentId;
+        console.log(merchantPaymentId);
+        router.push({ path: "/success", query: { key: merchantPaymentId } });
+      } else {
+        console.log("대기중");
+      }
+    } catch (error) {
+      console.log("결제실패");
+      clearInterval(intervalId);
+    }
+  };
+  let intervalId = setInterval(() => getResult(url), 5000);
 };
 </script>
 
